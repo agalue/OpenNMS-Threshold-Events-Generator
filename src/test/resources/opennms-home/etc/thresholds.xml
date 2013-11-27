@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thresholding-config>
+    <group name="TH-APC-UPS" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold type="low" ds-type="node" value="40.0" rearm="40.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/load/low/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/apc/ups/load/low/warning/rearmed"
+            filterOperator="or" ds-name="apcload"/>
+        <threshold type="low" ds-type="node" value="99.99" rearm="100.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/percent/low/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/apc/ups/percent/low/warning/rearmed"
+            filterOperator="or" ds-name="apcpercent"/>
+        <threshold type="low" ds-type="node" value="50.0" rearm="50.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/percent/low/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/apc/ups/percent/low/minor/rearmed"
+            filterOperator="or" ds-name="apcpercent"/>
+        <threshold type="low" ds-type="node" value="10.0" rearm="10.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/percent/low/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/apc/ups/percent/low/major/rearmed"
+            filterOperator="or" ds-name="apcpercent"/>
+        <threshold type="high" ds-type="node" value="35.0" rearm="30.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/temperature/warning/high/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/apc/ups/temperature/warning/high/rearmed"
+            filterOperator="or" ds-name="apctemp"/>
+        <threshold type="absoluteChange" ds-type="node" value="10.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/vac-in/warning/ac/exceeded"
+            filterOperator="or" ds-name="apcvacin"/>
+        <threshold type="absoluteChange" ds-type="node" value="1.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/vac-out/warning/ac/exceeded"
+            filterOperator="or" ds-name="apcvacout"/>
+        <expression type="low" ds-type="node" value="450.0"
+            rearm="460.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/apc/ups/time-remaining/low/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/apc/ups/time-remaining/low/warning/rearmed"
+            filterOperator="or" expression="apctime/6000"/>
+    </group>
+    <group name="TH-BANDWIDTH-IN-H-100MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth incoming high 100 MiB/s (800 Mbits) rearmed 80 MiB/s (640 MBits)"
+            type="high" ds-type="if" value="1.0E8" rearm="8.0E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/in/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/in/high/minor/rearmed"
+            filterOperator="or" ds-name="ifInOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-IN-H-15MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth incoming high 15 MiB/s (120 Mbits) rearmed 10 MiB/s (80 Mbits)"
+            type="high" ds-type="if" value="1.5E7" rearm="1.0E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/in/high/warning/rearmed"
+            filterOperator="or" ds-name="ifInOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-IN-H-30MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth incoming high 30 MiB/s (240 Mbits) rearmed 25 MiB/s (200 Mbits)"
+            type="high" ds-type="if" value="3.0E7" rearm="2.5E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/in/high/warning/rearmed"
+            filterOperator="or" ds-name="ifInOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-IN-H-5MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth incoming high 5 MiB/s (40 Mbits) rearmed 3 MiB/s (24 Mbits)"
+            type="high" ds-type="if" value="5000000.0" rearm="3000000.0"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/in/high/warning/rearmed"
+            filterOperator="or" ds-name="ifInOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-IN-H-60MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth incoming high 60 MiB/s (480 Mbits) rearmed 50 MiB/s (400 Mbits)"
+            type="high" ds-type="if" value="6.0E7" rearm="5.0E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/in/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/in/high/minor/rearmed"
+            filterOperator="or" ds-name="ifInOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-IN-H-80" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="bandwidth incoming usage in percent high 80.0 and rearmed 70.0"
+            type="high" ds-type="if" value="80.0" rearm="70.0"
+            trigger="3" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/in/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/in/high/minor/rearmed"
+            filterOperator="or" expression="ifInOctets * 8 * 100 / ifSpeed">
+            <resource-filter field="ifSpeed">^[1-9]+[0-9]*$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-BANDWIDTH-OUT-H-100MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth outgoing high 100 MiB/s (800 Mbits) rearmed 80 MiB/s (640 MBits)"
+            type="high" ds-type="if" value="1.0E8" rearm="8.0E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/out/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/out/high/minor/rearmed"
+            filterOperator="or" ds-name="ifOutOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-OUT-H-15MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth outgoing high 15 MiB/s (120 Mbits) rearmed 10 MiB/s (80 Mbits)"
+            type="high" ds-type="if" value="1.5E7" rearm="1.0E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/out/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/out/high/warning/rearmed"
+            filterOperator="or" ds-name="ifOutOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-OUT-H-30MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth outgoing high 30 MiB/s (240 MBits) rearmed 25 MiB/s (200 MBits)"
+            type="high" ds-type="if" value="3.0E7" rearm="2.5E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/out/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/out/high/warning/rearmed"
+            filterOperator="or" ds-name="ifOutOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-OUT-H-5MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth outgoing high 5 MiB/s (40 Mbits) rearmed 3 MiB/s (24 MBits)"
+            type="high" ds-type="if" value="5000000.0" rearm="3000000.0"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/out/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/out/high/warning/rearmed"
+            filterOperator="or" ds-name="ifOutOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-OUT-H-60MiBs" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="Bandwidth outgoing high 60 MiB/s (480 Mbits) rearmed 50 MiB/s (400 MBits)"
+            type="high" ds-type="if" value="6.0E7" rearm="5.0E7"
+            trigger="1" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/out/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/out/high/minor/rearmed"
+            filterOperator="or" ds-name="ifOutOctets"/>
+    </group>
+    <group name="TH-BANDWIDTH-OUT-H-80" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="bandwidth outgoing usage in percent high 80.0 and rearmed 70.0"
+            type="high" ds-type="if" value="80.0" rearm="70.0"
+            trigger="3" ds-label="ifName"
+            triggeredUEI="uei.opennms.org/threshold/network/bandwidth/out/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bandwidth/out/high/minor/rearmed"
+            filterOperator="or" expression="ifOutOctets * 8 * 100 / ifSpeed">
+            <resource-filter field="ifSpeed">^[1-9]+[0-9]*$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-CONTEXT-L-3500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="context low threshold 3500 rearm 7000"
+            type="low" ds-type="node" value="3500.0" rearm="7000.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/context/low/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/context/low/warning/rearmed"
+            filterOperator="or" ds-name="SysRawContext"/>
+    </group>
+    <group name="TH-CPU-H-65" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="cpu high threshold 65.0 rearmed 60.0 (Windows Single)"
+            type="high" ds-type="sinfCpuInstance" value="65.0"
+            rearm="60.0" trigger="5" ds-label="sinfCpuInstance"
+            triggeredUEI="uei.opennms.org/threshold/windows/cpu/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/cpu/high/warning/rearmed"
+            filterOperator="or" ds-name="sinfCpuPctProcTime">
+            <resource-filter field="sinfCpuInstance">^\d+</resource-filter>
+        </threshold>
+        <threshold
+            description="cpu high threshold 65.0 rearmed 60.0 (Windows Total)"
+            type="high" ds-type="sinfCpuInstance" value="65.0"
+            rearm="60.0" trigger="2" ds-label="sinfCpuInstance"
+            triggeredUEI="uei.opennms.org/threshold/windows/cpu/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/cpu/high/warning/rearmed"
+            filterOperator="or" ds-name="sinfCpuPctProcTime">
+            <resource-filter field="sinfCpuInstance">^_Total</resource-filter>
+        </threshold>
+        <expression
+            description="cpu high threshold 65.0 rearmed 60.0 (Unix Total)"
+            type="high" ds-type="node" value="65.0" rearm="60.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/cpu/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/cpu/high/warning/rearmed"
+            filterOperator="or" expression="(CpuRawUser+CpuRawNice+CpuRawSystem) / (CpuRawUser+CpuRawNice+CpuRawSystem+CpuRawIdle) *100"/>
+    </group>
+    <group name="TH-CPU-H-75" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="cpu high threshold 75.0 rearmed 70.0 (Windows Single)"
+            type="high" ds-type="sinfCpuInstance" value="75.0"
+            rearm="70.0" trigger="5" ds-label="sinfCpuInstance"
+            triggeredUEI="uei.opennms.org/threshold/windows/cpu/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/cpu/high/minor/rearmed"
+            filterOperator="or" ds-name="sinfCpuPctProcTime">
+            <resource-filter field="sinfCpuInstance">^\d+</resource-filter>
+        </threshold>
+        <threshold
+            description="cpu high threshold 75.0 rearmed 70.0 (Windows Total)"
+            type="high" ds-type="sinfCpuInstance" value="75.0"
+            rearm="70.0" trigger="2" ds-label="sinfCpuInstance"
+            triggeredUEI="uei.opennms.org/threshold/windows/cpu/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/cpu/high/minor/rearmed"
+            filterOperator="or" ds-name="sinfCpuPctProcTime">
+            <resource-filter field="sinfCpuInstance">^_Total</resource-filter>
+        </threshold>
+        <expression
+            description="cpu high threshold 75.0 rearmed 70.0 (Unix Total)"
+            type="high" ds-type="node" value="75.0" rearm="70.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/cpu/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/cpu/high/minor/rearmed"
+            filterOperator="or" expression="(CpuRawUser+CpuRawNice+CpuRawSystem) / (CpuRawUser+CpuRawNice+CpuRawSystem+CpuRawIdle) *100"/>
+    </group>
+    <group name="TH-CPU-H-85" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="cpu high threshold 85.0 rearmed 80.0 (Windows Single)"
+            type="high" ds-type="sinfCpuInstance" value="85.0"
+            rearm="80.0" trigger="5" ds-label="sinfCpuInstance"
+            triggeredUEI="uei.opennms.org/threshold/windows/cpu/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/cpu/high/major/rearmed"
+            filterOperator="or" ds-name="sinfCpuPctProcTime">
+            <resource-filter field="sinfCpuInstance">^\d+</resource-filter>
+        </threshold>
+        <threshold
+            description="cpu high threshold 85.0 rearmed 80.0 (Windows Total)"
+            type="high" ds-type="sinfCpuInstance" value="85.0"
+            rearm="80.0" trigger="2" ds-label="sinfCpuInstance"
+            triggeredUEI="uei.opennms.org/threshold/windows/cpu/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/cpu/high/major/rearmed"
+            filterOperator="or" ds-name="sinfCpuPctProcTime">
+            <resource-filter field="sinfCpuInstance">^_Total</resource-filter>
+        </threshold>
+        <expression
+            description="cpu high threshold 85.0 rearmed 80.0 (Unix Total)"
+            type="high" ds-type="node" value="85.0" rearm="80.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/cpu/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/cpu/high/major/rearmed"
+            filterOperator="or" expression="(CpuRawUser+CpuRawNice+CpuRawSystem) / (CpuRawUser+CpuRawNice+CpuRawSystem+CpuRawIdle) *100"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-100" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange threshold"
+            type="absoluteChange" ds-type="node" value="100.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-1000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange 1000"
+            type="absoluteChange" ds-type="node" value="1000.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-15" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange threshold"
+            type="absoluteChange" ds-type="node" value="15.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-2000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange 2000"
+            type="absoluteChange" ds-type="node" value="2000.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-400" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange 400"
+            type="absoluteChange" ds-type="node" value="400.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-50" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange threshold"
+            type="absoluteChange" ds-type="node" value="50.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-AC-8000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections absolutechange 8000"
+            type="absoluteChange" ds-type="node" value="8000.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/ac/minor/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-100" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 100"
+            type="high" ds-type="node" value="100.0" rearm="80.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-1000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 1000"
+            type="high" ds-type="node" value="1000.0" rearm="700.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/minor/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-20" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 20"
+            type="high" ds-type="node" value="20.0" rearm="17.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-2000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 2000"
+            type="high" ds-type="node" value="2000.0" rearm="1500.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/minor/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-250" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 250"
+            type="high" ds-type="node" value="250.0" rearm="235.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-3500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 3500"
+            type="high" ds-type="node" value="3500.0" rearm="3000.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/major/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-400" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 400"
+            type="high" ds-type="node" value="400.0" rearm="350.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/minor/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-H-50" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="current tcp connections high 50"
+            type="high" ds-type="node" value="50.0" rearm="35.0"
+            trigger="3"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-CURRENT-TCP-CONNECTIONS-L-2500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="current tcp connections low threshold 2500"
+            type="low" ds-type="node" value="2500.0" rearm="2600.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/current-tcp-connections/low/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/current-tcp-connections/low/major/rearmed"
+            filterOperator="or" ds-name="tcpCurrEstab"/>
+    </group>
+    <group name="TH-DISK-H-90" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression description="disk usage high 90.0 and rearmed 75.0"
+            type="high" ds-type="hrStorageIndex" value="90.0"
+            rearm="75.0" trigger="2" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/disk/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk/high/minor/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.4$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-DISK-H-95" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression description="disk usage high 95.0 and rearmed 85.0"
+            type="high" ds-type="hrStorageIndex" value="95.0"
+            rearm="85.0" trigger="1" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/disk/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk/high/major/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.4$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-DISK-H-99" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression description="disk usage high 99.0 and rearmed 96.0"
+            type="high" ds-type="hrStorageIndex" value="99.0"
+            rearm="96.0" trigger="1" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/disk/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk/high/major/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.4$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-DISK-IO-READ-H-500k" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="Disk IO read 500.000 (500k)" type="high"
+            ds-type="diskIOIndex" value="500000.0" rearm="300000.0"
+            trigger="1" ds-label="diskIODevice"
+            triggeredUEI="uei.opennms.org/threshold/disk-io/read/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk-io/read/high/warning/rearmed"
+            filterOperator="or" ds-name="diskIONRead"/>
+    </group>
+    <group name="TH-DISK-IO-WRITE-H-1M" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="Disk IO write 1.000.000 (1M)"
+            type="high" ds-type="diskIOIndex" value="1000000.0"
+            rearm="500000.0" trigger="1" ds-label="diskIODevice"
+            triggeredUEI="uei.opennms.org/threshold/disk-io/write/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk-io/write/high/warning/rearmed"
+            filterOperator="or" ds-name="diskIONWrite"/>
+    </group>
+    <group name="TH-DISK-IO-WRITE-H-3M" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="Disk IO write 3.000.000 (1M)"
+            type="high" ds-type="diskIOIndex" value="3000000.0"
+            rearm="1000000.0" trigger="1" ds-label="diskIODevice"
+            triggeredUEI="uei.opennms.org/threshold/disk-io/write/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk-io/write/high/minor/rearmed"
+            filterOperator="or" ds-name="diskIONWrite"/>
+    </group>
+    <group name="TH-DISK-IO-WRITE-H-500k" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="Disk IO write 500.000 (500k)"
+            type="high" ds-type="diskIOIndex" value="500000.0"
+            rearm="300000.0" trigger="1" ds-label="diskIODevice"
+            triggeredUEI="uei.opennms.org/threshold/disk-io/write/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/disk-io/write/high/warning/rearmed"
+            filterOperator="or" ds-name="diskIONWrite"/>
+    </group>
+    <group name="TH-DISK-RC-5" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression description="disk filled quickly over 5%"
+            type="relativeChange" ds-type="hrStorageIndex" value="90.0"
+            rearm="0.0" trigger="1" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/disk/rc/warning/exceeded"
+            rearmedUEI="" filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.4$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-AC-1500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections absolute change threshold 1500"
+            type="absoluteChange" ds-type="node" value="1500.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-AC-3000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections absolute change threshold 3000"
+            type="absoluteChange" ds-type="node" value="3000.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-AC-500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections absolute change threshold 500"
+            type="absoluteChange" ds-type="node" value="500.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-H-15000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections high threshold 15000"
+            type="high" ds-type="node" value="15000.0" rearm="13000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-H-25000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections high threshold 25000"
+            type="high" ds-type="node" value="25000.0" rearm="22000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-H-30000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections high threshold 30000"
+            type="high" ds-type="node" value="30000.0" rearm="27000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-CLIENT-H-4500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP client connections high threshold 4500"
+            type="high" ds-type="node" value="4500.0" rearm="4000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/client-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5CCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-MEMORY-H-75" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression type="high" ds-type="node" value="75.0" rearm="70.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/memory/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/memory/high/warning/rearmed"
+            filterOperator="or" expression="(f5MemoryUsed/f5Memory/Total)*100"/>
+    </group>
+    <group name="TH-F5-BIGIP-POOL-H-30" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP pool connections high threshold 30"
+            type="high" ds-type="ltmPoolStatName" value="30.0"
+            rearm="20.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/pool-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/pool-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="lPSServerCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-AC-1500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections absolute change threshold 1500"
+            type="absoluteChange" ds-type="node" value="1500.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-AC-3000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections absolute change threshold 3000"
+            type="absoluteChange" ds-type="node" value="3000.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-AC-500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections absolute change threshold 500"
+            type="absoluteChange" ds-type="node" value="500.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-H-15000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections high threshold 15000"
+            type="high" ds-type="node" value="15000.0" rearm="13000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-H-23000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections high threshold 23000"
+            type="high" ds-type="node" value="23000.0" rearm="20000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-H-2500" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections high threshold 2500"
+            type="high" ds-type="node" value="2500.0" rearm="2000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-F5-BIGIP-SERVER-H-27000" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="f5 BigIP server connections high threshold 27000"
+            type="high" ds-type="node" value="27000.0" rearm="24000.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/bigip/server-connections/high/warning/rearmed"
+            filterOperator="or" ds-name="f5SCurConns"/>
+    </group>
+    <group name="TH-MEMORY-H-75-Windows" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 75.0 and rearmed 60.0 (Windows)"
+            type="high" ds-type="hrStorageIndex" value="75.0"
+            rearm="60.0" trigger="2" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/windows/memory/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/memory/high/warning/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.2$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-MEMORY-H-75-Linux" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 75.0 and rearmed 60.0 (Linux)"
+            type="high" ds-type="node" value="75.0" rearm="60.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/linux/memory/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/linux/memory/high/warning/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memShared-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-75-Unix" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 75.0 and rearmed 60.0 (Unix)"
+            type="high" ds-type="node" value="75.0" rearm="60.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/memory/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/memory/high/warning/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-90-Windows" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 90.0 and rearmed 75.0 (Windows)"
+            type="high" ds-type="hrStorageIndex" value="90.0"
+            rearm="75.0" trigger="2" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/windows/memory/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/memory/high/minor/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.2$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-MEMORY-H-90-Linux" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 90.0 and rearmed 75.0 (Linux)"
+            type="high" ds-type="node" value="90.0" rearm="75.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/linux/memory/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/linux/memory/high/minor/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memShared-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-90-Unix" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 90.0 and rearmed 75.0 (Unix)"
+            type="high" ds-type="node" value="90.0" rearm="75.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/memory/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/memory/high/minor/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-95-Windows" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 95.0 and rearmed 85.0 (Windows)"
+            type="high" ds-type="hrStorageIndex" value="95.0"
+            rearm="85.0" trigger="1" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/windows/memory/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/memory/high/minor/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.2$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-MEMORY-H-95-Linux" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 95.0 and rearmed 85.0 (Linux)"
+            type="high" ds-type="node" value="95.0" rearm="85.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/linux/memory/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/linux/memory/high/minor/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memShared-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-95-Unix" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 95.0 and rearmed 85.0 (Unix)"
+            type="high" ds-type="node" value="95.0" rearm="85.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/memory/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/memory/high/minor/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-99-Windows" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 99.0 and rearmed 96.0 (Windows)"
+            type="high" ds-type="hrStorageIndex" value="99.0"
+            rearm="96.0" trigger="1" ds-label="hrStorageDescr"
+            triggeredUEI="uei.opennms.org/threshold/windows/memory/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/memory/high/major/rearmed"
+            filterOperator="or" expression="hrStorageUsed / hrStorageSize * 100.0">
+            <resource-filter field="hrStorageType">^\.1\.3\.6\.1\.2\.1\.25\.2\.1\.2$</resource-filter>
+        </expression>
+    </group>
+    <group name="TH-MEMORY-H-99-Linux" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 99.0 and rearmed 96.0 (Linux)"
+            type="high" ds-type="node" value="99.0" rearm="96.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/linux/memory/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/linux/memory/high/major/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memShared-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MEMORY-H-99-Unix" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression
+            description="Memory (RAM) usage high 99.0 and rearmed 96.0 (Unix)"
+            type="high" ds-type="node" value="99.0" rearm="96.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/unix/memory/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/memory/high/major/rearmed"
+            filterOperator="or" expression="(memTotalReal-memAvailReal-memBuffer-memCached)/memTotalAvail*100"/>
+    </group>
+    <group name="TH-MS-SQL" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold type="high" ds-type="node" value="100.0" rearm="90.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/ms-httpConnections/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/ms-httpConnections/high/warning/rearmed"
+            filterOperator="or" ds-name="msHttpConnections"/>
+    </group>
+    <group name="TH-MySQL" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold type="absoluteChange" ds-type="node" value="20.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/connections/ac/warning/exceeded"
+            filterOperator="or" ds-name="MyConnections"/>
+        <threshold type="high" ds-type="node" value="30.0" rearm="25.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/threads/running/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/mysql/threads/running/high/warning/rearmed"
+            filterOperator="or" ds-name="MyThreadsRunng"/>
+        <threshold type="absoluteChange" ds-type="node" value="10.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/threads/connected/ac/warning/exceeded"
+            filterOperator="or" ds-name="MyThreadsCnnctd"/>
+        <threshold type="high" ds-type="node" value="400000.0"
+            rearm="350000.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/bytes-received/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/mysql/bytes-received/high/warning/rearmed"
+            filterOperator="or" ds-name="MyBytesReceived"/>
+        <threshold type="high" ds-type="node" value="4000000.0"
+            rearm="3500000.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/bytes-sent/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/mysql/bytes-sent/high/warning/rearmed"
+            filterOperator="or" ds-name="MyBytesSent"/>
+        <threshold type="high" ds-type="node" value="1.0" rearm="0.0"
+            trigger="2"
+            triggeredUEI="uei.opennms.org/threshold/mysql/slow-queries/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/mysql/slow-queries/high/warning/rearmed"
+            filterOperator="or" ds-name="MySlowQueries"/>
+        <threshold type="absoluteChange" ds-type="node" value="500.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/questions/ac/warning/exceeded"
+            filterOperator="or" ds-name="MyQuestions"/>
+        <threshold type="high" ds-type="node" value="10000.0"
+            rearm="9000.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/keyread-requests/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/mysql/keyread-requests/high/warning/rearmed"
+            filterOperator="or" ds-name="MyKeyReadReqs"/>
+        <threshold type="high" ds-type="node" value="130.0"
+            rearm="100.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/mysql/keywrite-requests/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/mysql/keywrite-requests/high/warning/rearmed"
+            filterOperator="or" ds-name="MyKeyWritesReqs"/>
+    </group>
+    <group name="TH-PROCESS-AC-25" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold description="processes absolutechange 25"
+            type="absoluteChange" ds-type="node" value="25.0"
+            rearm="0.0" trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/process/ac/warning/exceeded"
+            rearmedUEI="" filterOperator="or" ds-name="sinfProcesses"/>
+    </group>
+    <group name="TH-SYSTEM-UPTIME-H-30-Unix" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression type="high" ds-type="node" value="30.0" rearm="1.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/unix/system/uptime/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/system/uptime/high/warning/rearmed"
+            filterOperator="or" expression="hrSystemUptime/8640000"/>
+    </group>
+    <group name="TH-SYSTEM-UPTIME-H-7-Unix" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression type="high" ds-type="node" value="7.0" rearm="1.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/unix/system/uptime/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/unix/system/uptime/high/warning/rearmed"
+            filterOperator="or" expression="hrSystemUptime/8640000"/>
+    </group>
+    <group name="TH-SYSTEM-UPTIME-H-30-Windows" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression type="high" ds-type="node" value="30.0" rearm="1.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/windows/system/uptime/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/system/uptime/high/warning/rearmed"
+            filterOperator="or" expression="hrSystemUptimeWin/86400000"/>
+    </group>
+    <group name="TH-SYSTEM-UPTIME-H-7-Windows" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <expression type="high" ds-type="node" value="7.0" rearm="1.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/windows/system/uptime/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/windows/system/uptime/high/warning/rearmed"
+            filterOperator="or" expression="hrSystemUptimeWin/86400000"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-200" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 200 rearmed 175"
+            type="high" ds-type="node" value="200.0" rearm="175.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-30" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 30 rearmed 25"
+            type="high" ds-type="node" value="30.0" rearm="25.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-350" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 350 rearmed 250"
+            type="high" ds-type="node" value="350.0" rearm="250.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/major/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-5" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 5 rearmed 1"
+            type="high" ds-type="node" value="5.0" rearm="1.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-50" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 50 rearmed 40"
+            type="high" ds-type="node" value="50.0" rearm="40.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-700" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 700 rearmed 550"
+            type="high" ds-type="node" value="700.0" rearm="550.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/major/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/major/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-IN-H-90" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections incoming (passive) high 90 rearmed 75"
+            type="high" ds-type="node" value="90.0" rearm="75.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/in/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpPassiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-OUT-H-20" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections outgoing (active) high 20 rearmed 10"
+            type="high" ds-type="node" value="20.0" rearm="10.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/minor/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/minor/rearmed"
+            filterOperator="or" ds-name="tcpActiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-OUT-H-200" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections outgoing (active) high 200 rearmed 150"
+            type="high" ds-type="node" value="200.0" rearm="150.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpActiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-OUT-H-5" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description=" connections outgoing (active) high 5 rearmed 1"
+            type="high" ds-type="node" value="5.0" rearm="1.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpActiveOpens"/>
+    </group>
+    <group name="TH-TCP-CONNECTIONS-OUT-H-50" rrdRepository="/var/lib/opennms/rrd/snmp/">
+        <threshold
+            description="tcp connections outgoing (active) high 50 rearmed 40"
+            type="high" ds-type="node" value="50.0" rearm="40.0"
+            trigger="1"
+            triggeredUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/warning/exceeded"
+            rearmedUEI="uei.opennms.org/threshold/network/tcp-connections/out/high/warning/rearmed"
+            filterOperator="or" ds-name="tcpActiveOpens"/>
+    </group>
+</thresholding-config>

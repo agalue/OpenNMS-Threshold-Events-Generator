@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<threshd-configuration threads="5">
+    <package name="TH-APC-UPS">
+        <filter>categoryname == 'TH-APC-UPS'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-APC-UPS"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-IN-H-100MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-IN-H-100MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-IN-H-100MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-IN-H-15MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-IN-H-15MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-IN-H-15MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-IN-H-30MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-IN-H-30MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-IN-H-30MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-IN-H-5MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-IN-H-5MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-IN-H-5MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-IN-H-60MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-IN-H-60MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-IN-H-60MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-IN-H-80">
+        <filter>categoryname == 'TH-BANDWIDTH-IN-H-80'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-IN-H-80"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-OUT-H-100MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-OUT-H-100MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-OUT-H-100MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-OUT-H-15MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-OUT-H-15MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-OUT-H-15MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-OUT-H-30MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-OUT-H-30MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-OUT-H-30MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-OUT-H-5MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-OUT-H-5MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-OUT-H-5MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-OUT-H-60MiBs">
+        <filter>categoryname == 'TH-BANDWIDTH-OUT-H-60MiBs'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-OUT-H-60MiBs"/>
+        </service>
+    </package>
+    <package name="TH-BANDWIDTH-OUT-H-80">
+        <filter>categoryname == 'TH-BANDWIDTH-OUT-H-80'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-BANDWIDTH-OUT-H-80"/>
+        </service>
+    </package>
+    <package name="TH-CONTEXT-L-3500">
+        <filter>categoryname == 'TH-CONTEXT-L-3500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CONTEXT-L-3500"/>
+        </service>
+    </package>
+    <package name="TH-CPU-H-65">
+        <filter>categoryname == 'TH-CPU-H-65'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CPU-H-65"/>
+        </service>
+    </package>
+    <package name="TH-CPU-H-75">
+        <filter>categoryname == 'TH-CPU-H-75'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CPU-H-75"/>
+        </service>
+    </package>
+    <package name="TH-CPU-H-85">
+        <filter>categoryname == 'TH-CPU-H-85'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CPU-H-85"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-100">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-100'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-100"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-1000">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-1000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-1000"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-15">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-15'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-15"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-2000">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-2000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-2000"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-400">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-400'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-400"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-50">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-50'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-50"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-AC-8000">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-AC-8000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-AC-8000"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-100">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-100'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-100"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-1000">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-1000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-1000"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-20">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-20'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-20"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-2000">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-2000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-2000"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-250">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-250'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-250"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-3500">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-3500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-3500"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-400">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-400'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-400"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-H-50">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-H-50'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-H-50"/>
+        </service>
+    </package>
+    <package name="TH-CURRENT-TCP-CONNECTIONS-L-2500">
+        <filter>categoryname == 'TH-CURRENT-TCP-CONNECTIONS-L-2500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-CURRENT-TCP-CONNECTIONS-L-2500"/>
+        </service>
+    </package>
+    <package name="TH-DISK-H-90">
+        <filter>categoryname == 'TH-DISK-H-90'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-H-90"/>
+        </service>
+    </package>
+    <package name="TH-DISK-H-95">
+        <filter>categoryname == 'TH-DISK-H-95'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-H-95"/>
+        </service>
+    </package>
+    <package name="TH-DISK-H-99">
+        <filter>categoryname == 'TH-DISK-H-99'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-H-99"/>
+        </service>
+    </package>
+    <package name="TH-DISK-IO-READ-H-500k">
+        <filter>categoryname == 'TH-DISK-IO-READ-H-500k'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-IO-READ-H-500k"/>
+        </service>
+    </package>
+    <package name="TH-DISK-IO-WRITE-H-1M">
+        <filter>categoryname == 'TH-DISK-IO-WRITE-H-1M'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-IO-WRITE-H-1M"/>
+        </service>
+    </package>
+    <package name="TH-DISK-IO-WRITE-H-3M">
+        <filter>categoryname == 'TH-DISK-IO-WRITE-H-3M'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-IO-WRITE-H-3M"/>
+        </service>
+    </package>
+    <package name="TH-DISK-IO-WRITE-H-500k">
+        <filter>categoryname == 'TH-DISK-IO-WRITE-H-500k'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-IO-WRITE-H-500k"/>
+        </service>
+    </package>
+    <package name="TH-DISK-RC-5">
+        <filter>categoryname == 'TH-DISK-RC-5'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-DISK-RC-5"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-AC-1500">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-AC-1500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-AC-1500"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-AC-3000">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-AC-3000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-AC-3000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-AC-500">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-AC-500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-AC-500"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-H-15000">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-H-15000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-H-15000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-H-25000">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-H-25000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-H-25000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-H-30000">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-H-30000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-H-30000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-CLIENT-H-4500">
+        <filter>categoryname == 'TH-F5-BIGIP-CLIENT-H-4500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-CLIENT-H-4500"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-MEMORY-H-75">
+        <filter>categoryname == 'TH-F5-BIGIP-MEMORY-H-75'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-MEMORY-H-75"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-POOL-H-30">
+        <filter>categoryname == 'TH-F5-BIGIP-POOL-H-30'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-POOL-H-30"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-AC-1500">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-AC-1500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-AC-1500"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-AC-3000">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-AC-3000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-AC-3000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-AC-500">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-AC-500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-AC-500"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-H-15000">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-H-15000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-H-15000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-H-23000">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-H-23000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-H-23000"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-H-2500">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-H-2500'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-H-2500"/>
+        </service>
+    </package>
+    <package name="TH-F5-BIGIP-SERVER-H-27000">
+        <filter>categoryname == 'TH-F5-BIGIP-SERVER-H-27000'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-F5-BIGIP-SERVER-H-27000"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-75-Windows">
+        <filter>categoryname == 'TH-MEMORY-H-75' &amp; nodeSysOID LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-75-Windows"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-75-Linux">
+        <filter>categoryname == 'TH-MEMORY-H-75' &amp; nodeSysOID == '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-75-Linux"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-75-Unix">
+        <filter>categoryname == 'TH-MEMORY-H-75' &amp; (nodeSysOID LIKE '.1.3.6.1.4.1.2021.%' | nodeSysOID LIKE '.1.3.6.1.4.1.8072.%') &amp; nodeSysOID != '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-75-Unix"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-90-Windows">
+        <filter>categoryname == 'TH-MEMORY-H-90' &amp; nodeSysOID LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-90-Windows"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-90-Linux">
+        <filter>categoryname == 'TH-MEMORY-H-90' &amp; nodeSysOID == '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-90-Linux"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-90-Unix">
+        <filter>categoryname == 'TH-MEMORY-H-90' &amp; (nodeSysOID LIKE '.1.3.6.1.4.1.2021.%' | nodeSysOID LIKE '.1.3.6.1.4.1.8072.%') &amp; nodeSysOID != '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-90-Unix"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-95-Windows">
+        <filter>categoryname == 'TH-MEMORY-H-95' &amp; nodeSysOID LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-95-Windows"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-95-Linux">
+        <filter>categoryname == 'TH-MEMORY-H-95' &amp; nodeSysOID == '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-95-Linux"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-95-Unix">
+        <filter>categoryname == 'TH-MEMORY-H-95' &amp; (nodeSysOID LIKE '.1.3.6.1.4.1.2021.%' | nodeSysOID LIKE '.1.3.6.1.4.1.8072.%') &amp; nodeSysOID != '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-95-Unix"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-99-Windows">
+        <filter>categoryname == 'TH-MEMORY-H-99' &amp; nodeSysOID LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-99-Windows"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-99-Linux">
+        <filter>categoryname == 'TH-MEMORY-H-99' &amp; nodeSysOID == '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-99-Linux"/>
+        </service>
+    </package>
+    <package name="TH-MEMORY-H-99-Unix">
+        <filter>categoryname == 'TH-MEMORY-H-99' &amp; (nodeSysOID LIKE '.1.3.6.1.4.1.2021.%' | nodeSysOID LIKE '.1.3.6.1.4.1.8072.%') &amp; nodeSysOID != '.1.3.6.1.4.1.8072.3.2.10'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MEMORY-H-99-Unix"/>
+        </service>
+    </package>
+    <package name="TH-MS-SQL">
+        <filter>categoryname == 'TH-MS-SQL'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MS-SQL"/>
+        </service>
+    </package>
+    <package name="TH-MySQL">
+        <filter>categoryname == 'TH-MySQL'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-MySQL"/>
+        </service>
+    </package>
+    <package name="TH-PROCESS-AC-25">
+        <filter>categoryname == 'TH-PROCESS-AC-25'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-PROCESS-AC-25"/>
+        </service>
+    </package>
+    <package name="TH-SYSTEM-UPTIME-H-30-Windows">
+        <filter>categoryname == 'TH-SYSTEM-UPTIME-H-30' &amp; nodeSysOID LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-SYSTEM-UPTIME-H-30-Windows"/>
+        </service>
+    </package>
+    <package name="TH-SYSTEM-UPTIME-H-7-Windows">
+        <filter>categoryname == 'TH-SYSTEM-UPTIME-H-7' &amp; nodeSysOID LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-SYSTEM-UPTIME-H-7-Windows"/>
+        </service>
+    </package>
+    <package name="TH-SYSTEM-UPTIME-H-30-Unix">
+        <filter>categoryname == 'TH-SYSTEM-UPTIME-H-30' &amp; nodeSysOID NOT LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-SYSTEM-UPTIME-H-30-Unix"/>
+        </service>
+    </package>
+    <package name="TH-SYSTEM-UPTIME-H-7-Unix">
+        <filter>categoryname == 'TH-SYSTEM-UPTIME-H-7' &amp; nodeSysOID NOT LIKE '.1.3.6.1.4.1.311.%'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-SYSTEM-UPTIME-H-7-Unix"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-200">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-200'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-200"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-30">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-30'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-30"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-350">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-350'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-350"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-5">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-5'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-5"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-50">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-50'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-50"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-700">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-700'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-700"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-IN-H-90">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-IN-H-90'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-IN-H-90"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-OUT-H-20">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-OUT-H-20'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-OUT-H-20"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-OUT-H-200">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-OUT-H-200'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-OUT-H-200"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-OUT-H-5">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-OUT-H-5'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-OUT-H-5"/>
+        </service>
+    </package>
+    <package name="TH-TCP-CONNECTIONS-OUT-H-50">
+        <filter>categoryname == 'TH-TCP-CONNECTIONS-OUT-H-50'</filter>
+        <include-range begin="1.1.1.1" end="254.254.254.254"/>
+        <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"/>
+        <service name="SNMP" interval="300000" user-defined="false" status="on">
+            <parameter key="thresholding-group" value="TH-TCP-CONNECTIONS-OUT-H-50"/>
+        </service>
+    </package>
+</threshd-configuration>

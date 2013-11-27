@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notifications>
+    <header>
+        <rev>1.2</rev>
+        <created>Tuesday, February 19, 2013 1:05:46 PM GMT</created>
+        <mstation>localhost</mstation>
+    </header>
+    <notification name="High Threshold" status="on" writeable="yes">
+        <uei>uei.opennms.org/threshold/highThresholdExceeded</uei>
+        <description>A monitored device has hit a high threshold</description>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
+        <subject>Notice #%noticeid%: High Threshold for %parm[ds]% on node %nodelabel%.</subject>
+    </notification>
+    <notification name="High Threshold Rearmed" status="on" writeable="yes">
+        <uei>uei.opennms.org/threshold/highThresholdRearmed</uei>
+        <description>A monitored device has recovered from a high threshold</description>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
+        <subject>Notice #%noticeid%: High Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
+    </notification>
+    <notification name="interfaceDeleted" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDeleted</uei>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>Due to extended downtime or operator action, the interface %interfaceresolve% (%interface%) on node %nodelabel% has been deleted from OpenNMS's polling database.</text-message>
+        <subject>Notice #%noticeid%: [OpenNMS] %interfaceresolve% (%interface%) on node %nodelabel% deleted.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="interfaceDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDown</uei>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>All services are down on interface %interfaceresolve% (%interface%) on node %nodelabel%.  New Outage records have been created and service level availability calculations will be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: %interfaceresolve% (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="nodeAdded" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeAdded</uei>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>OpenNMS has discovered a new node named %parm[nodelabel]%. Please be advised.</text-message>
+        <subject>Notice #%noticeid%: %parm[nodelabel]% discovered.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(IPADDR != '0.0.0.0')</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>All services are down on node %nodelabel%. New Outage records have been created and service level availability calculations will be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="serviceUnresponsive" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/serviceUnresponsive</uei>
+        <rule>(IPADDR != '0.0.0.0')</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>The %service% poll to interface %interfaceresolve% (%interface%) on node %nodelabel% successfully completed a connection to the service listener on the remote machine. However, the synthetic transaction failed to complete within %parm[timeout]% milliseconds, over %parm[attempts]% attempts.  This event will NOT impact service level agreements, but may be an indicator of other problems on that node.</text-message>
+        <subject>Notice #%noticeid%: %service% service on %interfaceresolve% (%interface%) on node %nodelabel% is unresponsive.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+</notifications>
