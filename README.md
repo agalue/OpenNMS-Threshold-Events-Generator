@@ -123,6 +123,8 @@ instance[dskIndex] = disk <b>%parm[label]%</b>
 
 # Requirements
 
+This tool is based on OpenNMS 1.12.2, and it is _NOT_ going to work on earlier versions.
+
 The tool requires access thresholds.xml from the OpenNMS installation, so it is recommended to execute the tool from the OpenNMS server directly. If the threshold defnitions doesn't have custom UEIs, the tool is going to suggest UEIs and it is going to generate the definitions.
 
 # Sample Event
