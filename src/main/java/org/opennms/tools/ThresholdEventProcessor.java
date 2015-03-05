@@ -41,7 +41,6 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.opennms.core.utils.LogUtils;
 import org.opennms.netmgt.config.notifications.Notification;
 import org.opennms.netmgt.config.threshd.Basethresholddef;
 import org.opennms.netmgt.config.threshd.Expression;
@@ -51,12 +50,17 @@ import org.opennms.netmgt.model.PrefabGraph;
 import org.opennms.netmgt.xml.eventconf.Events;
 import org.opennms.netmgt.xml.eventconf.Event;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * The Class ThresholdEventProcessor.
  * 
  * @author <a href="mailto:agalue@opennms.org">Alejandro Galue</a>
  */
 public class ThresholdEventProcessor {
+
+    private static final Logger LOG = LoggerFactory.getLogger(ThresholdEventProcessor.class);
 
     /** The Constant BASE_URI. */
     public static final String BASE_URI = "uei.opennms.org/threshold";
@@ -78,7 +82,7 @@ public class ThresholdEventProcessor {
             config.load(getClass().getResourceAsStream("/config.properties"));
             parseConfig();
         } catch (IOException e) {
-            LogUtils.errorf(this, "Can't load config.properties");
+            LOG.error("Can't load config.properties");
         }
     }
 
@@ -165,7 +169,7 @@ public class ThresholdEventProcessor {
             for (Threshold t : g.getThresholdCollection()) {
                 if (t.getTriggeredUEI() == null || t.getTriggeredUEI().trim().equals("")) {
                     generateTriggeredUei(t, baseUei, t.getDsName());
-                    LogUtils.warnf(this, "There is no TriggeredUEI for threshold %s using threshold %s on group %s; using %s", t.getType(), t.getDsName(), g.getName(), t.getTriggeredUEI());
+                    LOG.warn("There is no TriggeredUEI for threshold {} using threshold {} on group {}; using {}", t.getType(), t.getDsName(), g.getName(), t.getTriggeredUEI());
                 }
                 events.add(new ThresholdEvent(t, baseUei, true, useComputedExpression, getInstanceInfo(t.getDsType()), metrics));
                 if (shouldAddRearm(t, g.getName())) {
@@ -175,7 +179,7 @@ public class ThresholdEventProcessor {
             for (Expression ex : g.getExpressionCollection()) {
                 if (ex.getTriggeredUEI() == null || ex.getTriggeredUEI().trim().equals("")) {
                     generateTriggeredUei(ex, baseUei, g.getName());
-                    LogUtils.warnf(this, "There is no TriggeredUEI for threshold %s using expression '%s' on group %s; using %s", ex.getType(), ex.getExpression(), g.getName(), ex.getTriggeredUEI());
+                    LOG.warn("There is no TriggeredUEI for threshold {} using expression '{}' on group {}; using {}", ex.getType(), ex.getExpression(), g.getName(), ex.getTriggeredUEI());
                 }
                 events.add(new ThresholdEvent(ex, baseUei, true, useComputedExpression, getInstanceInfo(ex.getDsType()), metrics));
                 if (shouldAddRearm(ex, g.getName())) {
@@ -201,7 +205,7 @@ public class ThresholdEventProcessor {
             } else {
                 generateRearmedUei(def);
                 String expression = def instanceof Threshold ? ((Threshold)def).getDsName() : ((Expression)def).getExpression();
-                LogUtils.warnf(this, "There is no RearmedUEI for threshold %s using expression '%s' on group %s; using %s", def.getType(), expression, groupName, def.getRearmedUEI());
+                LOG.warn("There is no RearmedUEI for threshold {} using expression '{}' on group {}; using {}", def.getType(), expression, groupName, def.getRearmedUEI());
             }
         }
         return addRearm;

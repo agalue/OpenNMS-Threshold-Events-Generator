@@ -33,7 +33,6 @@ import java.util.List;
 import org.apache.commons.jexl2.ExpressionImpl;
 import org.apache.commons.jexl2.JexlEngine;
 import org.apache.commons.lang.StringUtils;
-import org.opennms.core.utils.LogUtils;
 import org.opennms.netmgt.config.threshd.Basethresholddef;
 import org.opennms.netmgt.config.threshd.Expression;
 import org.opennms.netmgt.config.threshd.Threshold;
@@ -42,12 +41,17 @@ import org.opennms.netmgt.xml.eventconf.AlarmData;
 import org.opennms.netmgt.xml.eventconf.Event;
 import org.opennms.netmgt.xml.eventconf.Logmsg;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * The Class ThresholdEvent.
  * 
  * @author <a href="mailto:agalue@opennms.org">Alejandro Galue</a>
  */
 public class ThresholdEvent implements Comparable<ThresholdEvent> {
+
+    private static final Logger LOG = LoggerFactory.getLogger(ThresholdEvent.class);
 
     /** The Constant BASE_UEI. */
     public static final String BASE_UEI = "uei.opennms.org/threshold";
@@ -142,7 +146,7 @@ public class ThresholdEvent implements Comparable<ThresholdEvent> {
                     }
                 }
             } catch (Exception e) {
-                LogUtils.errorf(this, "Can't parse expression %s.", thresholdExpression);
+                LOG.error("Can't parse expression {}.", thresholdExpression);
             }
         }
     }
